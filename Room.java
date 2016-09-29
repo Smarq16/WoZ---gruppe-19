@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Iterator;
 
 
+//The room class, describes what a room is able to do. It has a direction, a description and a neighbour(Which it exits leads to)
 public class Room{
     private String description;
     private HashMap<String, Room> exits;
@@ -15,20 +16,23 @@ public class Room{
         exits = new HashMap<String, Room>();
     }
 
+    //A method for describing a rooms direction and adjacent rooms
     public void setExit(String direction, Room neighbor){
         exits.put(direction, neighbor);
     }
-
+    
+    //A method for getting the description of the room
     public String getShortDescription(){
         return description;
     }
 
+    
     public String getLongDescription(){
-        return "You are " + description + ".\n" + getExitString();
+        return "\nYou are " + description + "\n" + getExitString();
     }
 
     private String getExitString(){
-        String returnString = "Exits:";
+        String returnString = "\nExits:";
         Set<String> keys = exits.keySet();
         for(String exit : keys) {
             returnString += " " + exit;

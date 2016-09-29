@@ -1,7 +1,7 @@
 
 package zuulframework;
 
-import java.util.HashMap; //Her importere vi HashMap - som er et "plugin" som gør vi kan bevæge os rundt tekstbaseret, ved at have nogle commands, som allerede er lavet.
+import java.util.HashMap;
 
 public class CommandWords{
     private HashMap<String, CommandWord> validCommands;
