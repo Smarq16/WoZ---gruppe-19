@@ -10,6 +10,6 @@ package zuulframework;
     }
     
     public String toString(){
-        return commandString;
+        return commandString; //also here
     }
 }
